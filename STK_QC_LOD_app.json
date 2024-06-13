@@ -86,20 +86,20 @@
   },
   {
    "kind": "Link",
-   "id": "3a0358c4-d503-492f-86c7-6a688df6ef01",
+   "id": "17d8d650-7262-49e7-afa0-b3c0eef64450",
    "inputId": "0018a3f9-3a37-45ef-9637-8abd358713c8-i-0",
    "outputId": "a9ff9ffe-9802-4c9c-9765-f98928ca6601-o-0"
   },
   {
    "kind": "Link",
-   "id": "5928abb7-d28a-4434-ad39-f455fd089f1f",
+   "id": "941dbbfa-084b-4d01-a282-39cadfb11424",
    "inputId": "a9ff9ffe-9802-4c9c-9765-f98928ca6601-i-0",
-   "outputId": "03df39a5-c23e-41db-a33b-36af80c8fd34-o-0"
+   "outputId": "7fc29197-1f52-4096-af00-f416d7b0f1eb-o-0"
   },
   {
    "kind": "Link",
-   "id": "a75f5f88-848b-4c9f-95b4-bf7dfe279f1d",
-   "inputId": "222e21b4-a190-4c82-ad2d-f28021597592-i-0",
+   "id": "af3a05ef-17c7-47cd-b6c1-4499cbf7b0b1",
+   "inputId": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9-i-0",
    "outputId": "7018ce36-8735-41c5-9d9c-949d0d51dade-o-0"
   }
  ],
@@ -294,7 +294,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "all_values",
+     "namespace": "STK_QC_2024.all_values",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Count",
@@ -379,7 +379,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "40d52101-0d54-447d-92e7-5d95b8e37134"
+    "id": "e6443ec7-81bc-479e-a41f-818b66104726"
    },
    "parentDataStepId": ""
   },
@@ -581,7 +581,7 @@
          "stringValue": "pass",
          "factor": {
           "kind": "Factor",
-          "name": "ds1.flag",
+          "name": "STK_QC_2024.ds1.flag",
           "type": "string"
          }
         }
@@ -593,7 +593,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "qc_passed",
+     "namespace": "STK_QC_2024.qc_passed",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Count",
@@ -678,7 +678,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "d664644d-1b9d-402d-b73f-93db180dd57a"
+    "id": "f94ce3b6-a8dd-4211-9518-5aad4aad7a19"
    },
    "parentDataStepId": ""
   },
@@ -779,7 +779,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "all_values.count",
+          "name": "STK_QC_2024.all_values.count",
           "type": "double"
          },
          "rectangle": {
@@ -812,7 +812,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "qc_passed.count",
+          "name": "STK_QC_2024.qc_passed.count",
           "type": "double"
          },
          "rectangle": {
@@ -872,7 +872,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "qc_stk_thr",
+     "namespace": "STK_QC_2024.qc_stk_thr",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Ratio",
@@ -932,7 +932,7 @@
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "qc_passed..ID",
+        "name": "STK_QC_2024.qc_passed..ID",
         "type": "string"
        },
        "rectangle": {
@@ -957,7 +957,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "8a05d5d9-efe6-4826-a944-dccb012aa9ed"
+    "id": "2fe93e42-596d-4dd8-87f4-93b924f4d273"
    },
    "parentDataStepId": ""
   },
@@ -1025,7 +1025,7 @@
         "factors": [
          {
           "kind": "Factor",
-          "name": "s100.logTransformed",
+          "name": "STK_QC_2024.s100.logTransformed",
           "type": "double"
          }
         ],
@@ -1104,7 +1104,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "s100.logTransformed",
+          "name": "STK_QC_2024.s100.logTransformed",
           "type": "double"
          },
          "rectangle": {
@@ -1172,7 +1172,7 @@
          "stringValue": "NaN",
          "factor": {
           "kind": "Factor",
-          "name": "qc_stk_thr.ratio",
+          "name": "STK_QC_2024.qc_stk_thr.ratio",
           "type": "double"
          }
         }
@@ -1184,7 +1184,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "ds0",
+     "namespace": "STK_QC_2024.ds0",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Identity",
@@ -1244,7 +1244,7 @@
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "qc_stk_thr.ratio",
+        "name": "STK_QC_2024.qc_stk_thr.ratio",
         "type": "double"
        },
        "rectangle": {
@@ -1265,7 +1265,7 @@
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "qc_stk_thr..ID",
+        "name": "STK_QC_2024.qc_stk_thr..ID",
         "type": "string"
        },
        "rectangle": {
@@ -1290,7 +1290,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "e5b700d3-0b4b-4338-be78-1e9449aea088"
+    "id": "e87ee767-02f3-4d0d-933f-1fe3b19bd836"
    },
    "parentDataStepId": ""
   },
@@ -1360,8 +1360,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -11.495000000000005,
-     "y": -531.5
+     "x": -9.495000000000005,
+     "y": -527.5
     }
    },
    "state": {
@@ -1374,9 +1374,9 @@
    "description": "Create a generic workflow.",
    "model": {
     "kind": "WizardStepModel",
-    "namespace": "STK_QC_2024",
+    "namespace": "STKQC_LOD",
     "description": "",
-    "appDesignType": "STK_QC_2024.simple",
+    "appDesignType": "STKQC_LOD.simple",
     "factors": [
      {
       "kind": "MappingFactor",
@@ -1470,52 +1470,7 @@
        "meta": [],
        "name": "PrePhos"
       },
-      "isRequired": false
-     },
-     {
-      "kind": "MappingFilter",
-      "name": "rm REF, PrePhos",
-      "description": "",
-      "namedFilter": {
-       "kind": "NamedFilter",
-       "logical": "or",
-       "not": true,
-       "filterExprs": [
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "#REF",
-         "factor": {
-          "kind": "Factor",
-          "name": "ID",
-          "type": "string"
-         }
-        },
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "pTY3H_64_78",
-         "factor": {
-          "kind": "Factor",
-          "name": "ID",
-          "type": "string"
-         }
-        },
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "pVASP_150_164",
-         "factor": {
-          "kind": "Factor",
-          "name": "ID",
-          "type": "string"
-         }
-        }
-       ],
-       "meta": [],
-       "name": "rm REF, PrePhos"
-      },
-      "isRequired": false
+      "isRequired": true
      }
     ],
     "steps": [],
@@ -1612,52 +1567,7 @@
        "meta": [],
        "name": "PrePhos"
       },
-      "isRequired": false
-     },
-     {
-      "kind": "MappingFilter",
-      "name": "rm REF, PrePhos",
-      "description": "",
-      "namedFilter": {
-       "kind": "NamedFilter",
-       "logical": "or",
-       "not": true,
-       "filterExprs": [
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "#REF",
-         "factor": {
-          "kind": "Factor",
-          "name": "ID",
-          "type": "string"
-         }
-        },
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "pTY3H_64_78",
-         "factor": {
-          "kind": "Factor",
-          "name": "ID",
-          "type": "string"
-         }
-        },
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "pVASP_150_164",
-         "factor": {
-          "kind": "Factor",
-          "name": "ID",
-          "type": "string"
-         }
-        }
-       ],
-       "meta": [],
-       "name": "rm REF, PrePhos"
-      },
-      "isRequired": false
+      "isRequired": true
      }
     ]
    }
@@ -1892,7 +1802,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "PrePhos",
+     "namespace": "STK_QC_2024.PrePhos",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Mean",
@@ -1977,7 +1887,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "512c0874-4844-44b2-b3ba-bcffc118322d"
+    "id": "f2935985-b251-446f-a323-077b5aa9e4b9"
    },
    "parentDataStepId": ""
   },
@@ -2214,7 +2124,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "PPx0.003.value",
+          "name": "STK_QC_2024.PPx0.003.value",
           "type": "double"
          },
          "rectangle": {
@@ -2274,7 +2184,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "ds1",
+     "namespace": "STK_QC_2024.ds1",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Thresholding",
@@ -2375,7 +2285,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "1fa8c7ae-99de-4dd6-a664-946b2400d9af"
+    "id": "ed830f5b-0230-4a7c-bbf1-95ba394a5dda"
    },
    "parentDataStepId": ""
   },
@@ -2509,7 +2419,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "PrePhos.value",
+          "name": "STK_QC_2024.PrePhos.value",
           "type": "double"
          },
          "rectangle": {
@@ -2599,7 +2509,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "PPx0.003",
+     "namespace": "STK_QC_2024.PPx0.003",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Multiply by Constant",
@@ -2690,7 +2600,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "64af6876-23fa-4cc8-81d0-cabe297754e2"
+    "id": "224fa2f1-03c3-45aa-8bf4-665e3592c3ee"
    },
    "parentDataStepId": ""
   },
@@ -2884,7 +2794,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "s100",
+     "namespace": "STK_QC_2024.s100",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Log Cutoff",
@@ -2985,19 +2895,19 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "2886bdc6-dfd1-4d04-9c52-9fcccbbf222d"
+    "id": "32b294db-14ed-46e8-9872-f31f4d172a51"
    },
    "parentDataStepId": ""
   },
   {
    "kind": "InStep",
-   "id": "03df39a5-c23e-41db-a33b-36af80c8fd34",
+   "id": "7fc29197-1f52-4096-af00-f416d7b0f1eb",
    "groupId": "",
    "name": "Input",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "03df39a5-c23e-41db-a33b-36af80c8fd34-i-0",
+     "id": "7fc29197-1f52-4096-af00-f416d7b0f1eb-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -3005,7 +2915,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "03df39a5-c23e-41db-a33b-36af80c8fd34-o-0",
+     "id": "7fc29197-1f52-4096-af00-f416d7b0f1eb-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -3019,8 +2929,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -7.4950000000000045,
-     "y": -645.5
+     "x": -9.495000000000005,
+     "y": -644.5
     }
    },
    "state": {
@@ -3039,13 +2949,13 @@
   },
   {
    "kind": "OutStep",
-   "id": "222e21b4-a190-4c82-ad2d-f28021597592",
+   "id": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9",
    "groupId": "",
    "name": "Output",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "222e21b4-a190-4c82-ad2d-f28021597592-i-0",
+     "id": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -3053,7 +2963,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "222e21b4-a190-4c82-ad2d-f28021597592-o-0",
+     "id": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -3067,8 +2977,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": 267.505,
-     "y": 216.5
+     "x": 250.505,
+     "y": 156.5
     }
    },
    "state": {
@@ -3088,8 +2998,8 @@
  ],
  "offset": {
   "kind": "Point",
-  "x": 805.0,
-  "y": 278.0
+  "x": 864.0,
+  "y": 321.0
  },
  "scale": 1.0
 }
