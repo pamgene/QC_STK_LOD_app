@@ -18,11 +18,11 @@ Based on 11 datasets of technical replicates, the S100 signal at 30% CV (CV with
 The signal strength is correlated with the signal strength of the prephosphorylated peptides. 
 Thus, there is a consistent ratio of the S100 signal at 30% CV / S100 signal of the prephoshorylated peptides: this is 0.0026.
 
-$$ 0.0026 = {S100 signal at 30% CV \over S100 signal of prephoshorylated peptides} $$
+0.0026 = (S100 signal at 30% CV of technical replicates) / (S100 of prephoshorylated peptides)
 
 Thus:
 
-$$ LOD = {0.0026 * S100 signal of prephoshorylated peptides} $$
+LOD = 0.0026 * S100 of prephoshorylated peptides
 
 
 

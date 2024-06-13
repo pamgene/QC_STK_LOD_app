@@ -1,0 +1,91 @@
+{
+ "kind": "TableSchema",
+ "id": "0f5fc87473202a26952bd0c606c22f31989c315f4e327c68a6553cdda6f0af59",
+ "isDeleted": false,
+ "rev": "",
+ "description": "",
+ "name": "S100.csv",
+ "acl": {
+  "kind": "Acl",
+  "owner": "",
+  "aces": []
+ },
+ "createdDate": {
+  "kind": "Date",
+  "value": ""
+ },
+ "lastModifiedDate": {
+  "kind": "Date",
+  "value": ""
+ },
+ "urls": [],
+ "tags": [],
+ "meta": [
+  {
+   "kind": "Pair",
+   "key": "SHA256",
+   "value": "0f5fc87473202a26952bd0c606c22f31989c315f4e327c68a6553cdda6f0af59"
+  }
+ ],
+ "url": {
+  "kind": "Url",
+  "uri": ""
+ },
+ "version": "",
+ "isPublic": false,
+ "projectId": "",
+ "folderId": "",
+ "nRows": 3335,
+ "columns": [
+  {
+   "kind": "ColumnSchema",
+   "id": "7a0f809e-4935-4c37-9852-0719ec80569d",
+   "name": "ID",
+   "type": "string",
+   "nRows": 0,
+   "size": -1,
+   "metaData": {
+    "kind": "ColumnSchemaMetaData",
+    "sort": [],
+    "ascending": true,
+    "quartiles": [],
+    "properties": []
+   }
+  },
+  {
+   "kind": "ColumnSchema",
+   "id": "9620abdf-a27e-47f6-99ef-053ae83c1911",
+   "name": "Observation",
+   "type": "string",
+   "nRows": 0,
+   "size": -1,
+   "metaData": {
+    "kind": "ColumnSchemaMetaData",
+    "sort": [],
+    "ascending": true,
+    "quartiles": [],
+    "properties": []
+   }
+  },
+  {
+   "kind": "ColumnSchema",
+   "id": "7b8a8bf5-ff70-4a64-845d-1a35c2089999",
+   "name": "S100",
+   "type": "double",
+   "nRows": 0,
+   "size": -1,
+   "metaData": {
+    "kind": "ColumnSchemaMetaData",
+    "sort": [],
+    "ascending": true,
+    "quartiles": [],
+    "properties": []
+   }
+  }
+ ],
+ "dataDirectory": "data/0f/5f/0f5fc87473202a26952bd0c606c22f31989c315f4e327c68a6553cdda6f0af59",
+ "relation": {
+  "kind": "Relation",
+  "id": "70cd741e-7723-435c-8d8f-11a7c45b1e0f"
+ }
+}
