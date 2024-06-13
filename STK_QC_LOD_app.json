@@ -20,13 +20,7 @@
  },
  "urls": [],
  "tags": [],
- "meta": [
-  {
-   "kind": "Pair",
-   "key": "PUBLISHED",
-   "value": "true"
-  }
- ],
+ "meta": [],
  "url": {
   "kind": "Url",
   "uri": ""
@@ -86,20 +80,20 @@
   },
   {
    "kind": "Link",
-   "id": "17d8d650-7262-49e7-afa0-b3c0eef64450",
+   "id": "2ad647ea-8ec7-4af2-bdf2-3a661b2f4919",
    "inputId": "0018a3f9-3a37-45ef-9637-8abd358713c8-i-0",
    "outputId": "a9ff9ffe-9802-4c9c-9765-f98928ca6601-o-0"
   },
   {
    "kind": "Link",
-   "id": "941dbbfa-084b-4d01-a282-39cadfb11424",
+   "id": "42a3fd17-012f-47a0-841b-0a15fc44e7cb",
    "inputId": "a9ff9ffe-9802-4c9c-9765-f98928ca6601-i-0",
-   "outputId": "7fc29197-1f52-4096-af00-f416d7b0f1eb-o-0"
+   "outputId": "ca714869-f197-4741-a9d6-827c84d0ff7f-o-0"
   },
   {
    "kind": "Link",
-   "id": "af3a05ef-17c7-47cd-b6c1-4499cbf7b0b1",
-   "inputId": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9-i-0",
+   "id": "259058e6-4b55-4e6b-81f1-e24de3925657",
+   "inputId": "75ab8d4f-7e28-409c-a202-b9a2e00cd028-i-0",
    "outputId": "7018ce36-8735-41c5-9d9c-949d0d51dade-o-0"
   }
  ],
@@ -135,7 +129,7 @@
     "topLeft": {
      "kind": "Point",
      "x": 5.5049999999999955,
-     "y": -63.5
+     "y": -64.5
     }
    },
    "state": {
@@ -234,7 +228,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "S100",
+          "name": "Measurement",
           "type": "double"
          },
          "rectangle": {
@@ -290,11 +284,31 @@
     "filters": {
      "kind": "Filters",
      "removeNaN": true,
-     "namedFilters": []
+     "namedFilters": [
+      {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
+      }
+     ]
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.all_values",
+     "namespace": "STKQC_LOD.all_values",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Count",
@@ -347,14 +361,14 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 50.0,
+     "cellSize": 40.0,
      "offset": 0,
      "graphicalFactors": [
       {
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string"
        },
        "rectangle": {
@@ -373,13 +387,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 145
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "e6443ec7-81bc-479e-a41f-818b66104726"
+    "id": "a1f36611-4d1e-49a4-8fda-b9d2586ba9da"
    },
    "parentDataStepId": ""
   },
@@ -413,7 +427,7 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -2.7309341430664062,
+     "x": -4.730934143066406,
      "y": 26.5
     }
    },
@@ -513,7 +527,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "S100",
+          "name": "Measurement",
           "type": "double"
          },
          "rectangle": {
@@ -578,10 +592,29 @@
         {
          "kind": "FilterExpr",
          "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
+      },
+      {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
          "stringValue": "pass",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.ds1.flag",
+          "name": "STKQC_LOD.thr.flag",
           "type": "string"
          }
         }
@@ -593,7 +626,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.qc_passed",
+     "namespace": "STKQC_LOD.qc_pass",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Count",
@@ -646,14 +679,14 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 73.0,
+     "cellSize": 70.0,
      "offset": 0,
      "graphicalFactors": [
       {
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string"
        },
        "rectangle": {
@@ -672,13 +705,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 113
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "f94ce3b6-a8dd-4211-9518-5aad4aad7a19"
+    "id": "226f00af-2e89-4571-986d-5d5261158c93"
    },
    "parentDataStepId": ""
   },
@@ -779,7 +812,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.all_values.count",
+          "name": "STKQC_LOD.all_values.count",
           "type": "double"
          },
          "rectangle": {
@@ -812,7 +845,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.qc_passed.count",
+          "name": "STKQC_LOD.qc_pass.count",
           "type": "double"
          },
          "rectangle": {
@@ -872,7 +905,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.qc_stk_thr",
+     "namespace": "STKQC_LOD.qc_stk_thr",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Ratio",
@@ -925,14 +958,14 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 62.666666666666664,
+     "cellSize": 34.0,
      "offset": 0,
      "graphicalFactors": [
       {
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "STK_QC_2024.qc_passed..ID",
+        "name": "STKQC_LOD.qc_pass..Variable",
         "type": "string"
        },
        "rectangle": {
@@ -951,13 +984,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 113
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "2fe93e42-596d-4dd8-87f4-93b924f4d273"
+    "id": "385f04fe-2ade-44c4-9ab6-6277f41d6e49"
    },
    "parentDataStepId": ""
   },
@@ -1025,7 +1058,7 @@
         "factors": [
          {
           "kind": "Factor",
-          "name": "STK_QC_2024.s100.logTransformed",
+          "name": "STKQC_LOD.ds1.logTransformed",
           "type": "double"
          }
         ],
@@ -1104,7 +1137,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.s100.logTransformed",
+          "name": "STKQC_LOD.ds1.logTransformed",
           "type": "double"
          },
          "rectangle": {
@@ -1155,7 +1188,7 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 23
     },
     "filters": {
      "kind": "Filters",
@@ -1172,7 +1205,7 @@
          "stringValue": "NaN",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.qc_stk_thr.ratio",
+          "name": "STKQC_LOD.qc_stk_thr.ratio",
           "type": "double"
          }
         }
@@ -1237,22 +1270,22 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 15.45098814229246,
+     "cellSize": 21.0,
      "offset": 0,
      "graphicalFactors": [
       {
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "STK_QC_2024.qc_stk_thr.ratio",
+        "name": "STKQC_LOD.qc_stk_thr.ratio",
         "type": "double"
        },
        "rectangle": {
         "kind": "Rectangle",
         "extent": {
          "kind": "Point",
-         "x": 160.0,
-         "y": 30.0
+         "x": 175.0,
+         "y": 0.0
         },
         "topLeft": {
          "kind": "Point",
@@ -1265,14 +1298,14 @@
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "STK_QC_2024.qc_stk_thr..ID",
+        "name": "STKQC_LOD.qc_stk_thr..Variable",
         "type": "string"
        },
        "rectangle": {
         "kind": "Rectangle",
         "extent": {
          "kind": "Point",
-         "x": 58.0,
+         "x": 66.0,
          "y": 30.0
         },
         "topLeft": {
@@ -1284,13 +1317,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 113
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "e87ee767-02f3-4d0d-933f-1fe3b19bd836"
+    "id": "7827c560-2d8a-4035-b17e-2a4dae7e702f"
    },
    "parentDataStepId": ""
   },
@@ -1317,7 +1350,7 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": 20.504999999999995,
+     "x": 21.504999999999995,
      "y": 309.5
     }
    },
@@ -1360,8 +1393,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -9.495000000000005,
-     "y": -527.5
+     "x": -12.495000000000005,
+     "y": -532.5
     }
    },
    "state": {
@@ -1380,7 +1413,7 @@
     "factors": [
      {
       "kind": "MappingFactor",
-      "name": "S100",
+      "name": "Measurement",
       "type": "double",
       "description": "",
       "ontologyMapping": "",
@@ -1389,17 +1422,17 @@
       "factors": [
        {
         "kind": "Factor",
-        "name": "S100",
+        "name": "Measurement",
         "type": "double"
        }
       ],
-      "factorName": "S100",
+      "factorName": "Measurement",
       "isSingle": true,
       "isRequired": true
      },
      {
       "kind": "MappingFactor",
-      "name": "ID",
+      "name": "Variable",
       "type": "string",
       "description": "",
       "ontologyMapping": "",
@@ -1408,11 +1441,11 @@
       "factors": [
        {
         "kind": "Factor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string"
        }
       ],
-      "factorName": "ID",
+      "factorName": "Variable",
       "isSingle": false,
       "isRequired": true
      },
@@ -1420,7 +1453,7 @@
       "kind": "MappingFactor",
       "name": "Observation",
       "type": "string",
-      "description": "",
+      "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n * Sample Name",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1431,7 +1464,26 @@
         "type": "string"
        }
       ],
-      "factorName": "Observation",
+      "factorName": "Single Data Value per Cell",
+      "isSingle": false,
+      "isRequired": true
+     },
+     {
+      "kind": "MappingFactor",
+      "name": "Cycle",
+      "type": "double",
+      "description": "",
+      "ontologyMapping": "",
+      "crosstabMapping": "",
+      "cardinality": "",
+      "factors": [
+       {
+        "kind": "Factor",
+        "name": "Cycle",
+        "type": "double"
+       }
+      ],
+      "factorName": "Cycle",
       "isSingle": false,
       "isRequired": true
      }
@@ -1440,10 +1492,10 @@
      {
       "kind": "MappingFilter",
       "name": "PrePhos",
-      "description": "",
+      "description": "Select the prephosphorylated peptides",
       "namedFilter": {
        "kind": "NamedFilter",
-       "logical": "or",
+       "logical": "and",
        "not": false,
        "filterExprs": [
         {
@@ -1452,7 +1504,7 @@
          "stringValue": "pTY3H_64_78",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         },
@@ -1462,7 +1514,7 @@
          "stringValue": "pVASP_150_164",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         }
@@ -1471,13 +1523,38 @@
        "name": "PrePhos"
       },
       "isRequired": true
+     },
+     {
+      "kind": "MappingFilter",
+      "name": "Cycle",
+      "description": "",
+      "namedFilter": {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
+      },
+      "isRequired": true
      }
     ],
     "steps": [],
     "defaultFactors": [
      {
       "kind": "MappingFactor",
-      "name": "S100",
+      "name": "Measurement",
       "type": "double",
       "description": "",
       "ontologyMapping": "",
@@ -1486,17 +1563,17 @@
       "factors": [
        {
         "kind": "Factor",
-        "name": "S100",
+        "name": "Measurement",
         "type": "double"
        }
       ],
-      "factorName": "S100",
+      "factorName": "Measurement",
       "isSingle": true,
       "isRequired": true
      },
      {
       "kind": "MappingFactor",
-      "name": "ID",
+      "name": "Variable",
       "type": "string",
       "description": "",
       "ontologyMapping": "",
@@ -1505,11 +1582,11 @@
       "factors": [
        {
         "kind": "Factor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string"
        }
       ],
-      "factorName": "ID",
+      "factorName": "Variable",
       "isSingle": false,
       "isRequired": true
      },
@@ -1517,7 +1594,7 @@
       "kind": "MappingFactor",
       "name": "Observation",
       "type": "string",
-      "description": "",
+      "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n * Sample Name",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1528,7 +1605,26 @@
         "type": "string"
        }
       ],
-      "factorName": "Observation",
+      "factorName": "Single Data Value per Cell",
+      "isSingle": false,
+      "isRequired": true
+     },
+     {
+      "kind": "MappingFactor",
+      "name": "Cycle",
+      "type": "double",
+      "description": "",
+      "ontologyMapping": "",
+      "crosstabMapping": "",
+      "cardinality": "",
+      "factors": [
+       {
+        "kind": "Factor",
+        "name": "Cycle",
+        "type": "double"
+       }
+      ],
+      "factorName": "Cycle",
       "isSingle": false,
       "isRequired": true
      }
@@ -1537,10 +1633,10 @@
      {
       "kind": "MappingFilter",
       "name": "PrePhos",
-      "description": "",
+      "description": "Select the prephosphorylated peptides",
       "namedFilter": {
        "kind": "NamedFilter",
-       "logical": "or",
+       "logical": "and",
        "not": false,
        "filterExprs": [
         {
@@ -1549,7 +1645,7 @@
          "stringValue": "pTY3H_64_78",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         },
@@ -1559,13 +1655,38 @@
          "stringValue": "pVASP_150_164",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         }
        ],
        "meta": [],
        "name": "PrePhos"
+      },
+      "isRequired": true
+     },
+     {
+      "kind": "MappingFilter",
+      "name": "Cycle",
+      "description": "",
+      "namedFilter": {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
       },
       "isRequired": true
      }
@@ -1712,7 +1833,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "S100",
+          "name": "Measurement",
           "type": "double"
          },
          "rectangle": {
@@ -1737,7 +1858,7 @@
     },
     "columnTable": {
      "kind": "CrosstabTable",
-     "cellSize": 250.0,
+     "cellSize": 709.0,
      "offset": 0,
      "graphicalFactors": [
       {
@@ -1780,7 +1901,7 @@
          "stringValue": "pTY3H_64_78",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         },
@@ -1790,19 +1911,38 @@
          "stringValue": "pVASP_150_164",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         }
        ],
        "meta": [],
        "name": "PrePhos"
+      },
+      {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
       }
      ]
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.PrePhos",
+     "namespace": "STKQC_LOD.PrePhos",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Mean",
@@ -1887,7 +2027,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "f2935985-b251-446f-a323-077b5aa9e4b9"
+    "id": "fdd715d0-ef07-4efa-8c3d-46ece515c2e4"
    },
    "parentDataStepId": ""
   },
@@ -1922,7 +2062,7 @@
     "topLeft": {
      "kind": "Point",
      "x": -8.674957275390625,
-     "y": -150.5
+     "y": -151.5
     }
    },
    "state": {
@@ -2021,7 +2161,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "S100",
+          "name": "Measurement",
           "type": "double"
          },
          "rectangle": {
@@ -2124,7 +2264,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.PPx0.003.value",
+          "name": "STKQC_LOD.LOD.value",
           "type": "double"
          },
          "rectangle": {
@@ -2149,7 +2289,7 @@
     },
     "columnTable": {
      "kind": "CrosstabTable",
-     "cellSize": 19.108695652173914,
+     "cellSize": 47.23913043478261,
      "offset": 0,
      "graphicalFactors": [
       {
@@ -2175,16 +2315,36 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 23
     },
     "filters": {
      "kind": "Filters",
      "removeNaN": true,
-     "namedFilters": []
+     "namedFilters": [
+      {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
+      }
+     ]
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.ds1",
+     "namespace": "STKQC_LOD.thr",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Thresholding",
@@ -2253,22 +2413,22 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 95.0,
-     "offset": 6,
+     "cellSize": 250.0,
+     "offset": 0,
      "graphicalFactors": [
       {
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string"
        },
        "rectangle": {
         "kind": "Rectangle",
         "extent": {
          "kind": "Point",
-         "x": 161.0,
-         "y": 30.0
+         "x": 80.0,
+         "y": 0.0
         },
         "topLeft": {
          "kind": "Point",
@@ -2279,13 +2439,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 145
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "ed830f5b-0230-4a7c-bbf1-95ba394a5dda"
+    "id": "92cb61c1-5679-4eb0-a2a4-f720b3e7d649"
    },
    "parentDataStepId": ""
   },
@@ -2419,7 +2579,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "STK_QC_2024.PrePhos.value",
+          "name": "STKQC_LOD.PrePhos.value",
           "type": "double"
          },
          "rectangle": {
@@ -2487,7 +2647,7 @@
          "stringValue": "pTY3H_64_78",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         },
@@ -2497,7 +2657,7 @@
          "stringValue": "pVASP_150_164",
          "factor": {
           "kind": "Factor",
-          "name": "ID",
+          "name": "Variable",
           "type": "string"
          }
         }
@@ -2509,7 +2669,7 @@
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.PPx0.003",
+     "namespace": "STKQC_LOD.LOD",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Multiply by Constant",
@@ -2600,7 +2760,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "224fa2f1-03c3-45aa-8bf4-665e3592c3ee"
+    "id": "0b686acd-1e57-4b0a-a926-0ef34812bedd"
    },
    "parentDataStepId": ""
   },
@@ -2734,7 +2894,7 @@
          "kind": "GraphicalFactor",
          "factor": {
           "kind": "Factor",
-          "name": "S100",
+          "name": "Measurement",
           "type": "double"
          },
          "rectangle": {
@@ -2759,7 +2919,7 @@
     },
     "columnTable": {
      "kind": "CrosstabTable",
-     "cellSize": 94.0,
+     "cellSize": 25.0,
      "offset": 0,
      "graphicalFactors": [
       {
@@ -2782,19 +2942,60 @@
          "y": 0.0
         }
        }
+      },
+      {
+       "kind": "GraphicalFactor",
+       "factor": {
+        "kind": "Factor",
+        "name": "Cycle",
+        "type": "double"
+       },
+       "rectangle": {
+        "kind": "Rectangle",
+        "extent": {
+         "kind": "Point",
+         "x": 50.0,
+         "y": 30.0
+        },
+        "topLeft": {
+         "kind": "Point",
+         "x": 0.0,
+         "y": 0.0
+        }
+       }
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 23
     },
     "filters": {
      "kind": "Filters",
      "removeNaN": true,
-     "namedFilters": []
+     "namedFilters": [
+      {
+       "kind": "NamedFilter",
+       "logical": "and",
+       "not": false,
+       "filterExprs": [
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "124",
+         "factor": {
+          "kind": "Factor",
+          "name": "Cycle",
+          "type": "double"
+         }
+        }
+       ],
+       "meta": [],
+       "name": "Cycle"
+      }
+     ]
     },
     "operatorSettings": {
      "kind": "OperatorSettings",
-     "namespace": "STK_QC_2024.s100",
+     "namespace": "STKQC_LOD.ds1",
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Log Cutoff",
@@ -2863,14 +3064,14 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 35.0,
+     "cellSize": 28.0,
      "offset": 0,
      "graphicalFactors": [
       {
        "kind": "GraphicalFactor",
        "factor": {
         "kind": "Factor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string"
        },
        "rectangle": {
@@ -2889,25 +3090,25 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 1
+     "nRows": 145
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "32b294db-14ed-46e8-9872-f31f4d172a51"
+    "id": "38b6ac14-5b48-44dd-bfaa-caf64cae050d"
    },
    "parentDataStepId": ""
   },
   {
    "kind": "InStep",
-   "id": "7fc29197-1f52-4096-af00-f416d7b0f1eb",
+   "id": "ca714869-f197-4741-a9d6-827c84d0ff7f",
    "groupId": "",
    "name": "Input",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "7fc29197-1f52-4096-af00-f416d7b0f1eb-i-0",
+     "id": "ca714869-f197-4741-a9d6-827c84d0ff7f-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -2915,7 +3116,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "7fc29197-1f52-4096-af00-f416d7b0f1eb-o-0",
+     "id": "ca714869-f197-4741-a9d6-827c84d0ff7f-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -2929,8 +3130,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -9.495000000000005,
-     "y": -644.5
+     "x": -8.495000000000005,
+     "y": -646.5
     }
    },
    "state": {
@@ -2949,13 +3150,13 @@
   },
   {
    "kind": "OutStep",
-   "id": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9",
+   "id": "75ab8d4f-7e28-409c-a202-b9a2e00cd028",
    "groupId": "",
    "name": "Output",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9-i-0",
+     "id": "75ab8d4f-7e28-409c-a202-b9a2e00cd028-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -2963,7 +3164,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "76c8b6f7-0d92-4c2e-91c5-35112d23f9a9-o-0",
+     "id": "75ab8d4f-7e28-409c-a202-b9a2e00cd028-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -2977,8 +3178,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": 250.505,
-     "y": 156.5
+     "x": 218.505,
+     "y": 121.5
     }
    },
    "state": {
@@ -2998,8 +3199,8 @@
  ],
  "offset": {
   "kind": "Point",
-  "x": 864.0,
-  "y": 321.0
+  "x": 962.0,
+  "y": 745.0
  },
  "scale": 1.0
 }

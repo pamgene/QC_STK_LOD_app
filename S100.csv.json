@@ -1,6 +1,6 @@
 {
  "kind": "TableSchema",
- "id": "0f5fc87473202a26952bd0c606c22f31989c315f4e327c68a6553cdda6f0af59",
+ "id": "ad9103660cf3bfab1f884316b6273bebefe3665a820c168791e29c50bbab8229",
  "isDeleted": false,
  "rev": "",
  "description": "",
@@ -24,7 +24,7 @@
   {
    "kind": "Pair",
    "key": "SHA256",
-   "value": "0f5fc87473202a26952bd0c606c22f31989c315f4e327c68a6553cdda6f0af59"
+   "value": "ad9103660cf3bfab1f884316b6273bebefe3665a820c168791e29c50bbab8229"
   }
  ],
  "url": {
@@ -35,12 +35,12 @@
  "isPublic": false,
  "projectId": "",
  "folderId": "",
- "nRows": 3335,
+ "nRows": 6670,
  "columns": [
   {
    "kind": "ColumnSchema",
-   "id": "7a0f809e-4935-4c37-9852-0719ec80569d",
-   "name": "ID",
+   "id": "13fc9051-88bb-4e28-9fce-3f0ac1658092",
+   "name": "Variable",
    "type": "string",
    "nRows": 0,
    "size": -1,
@@ -54,7 +54,7 @@
   },
   {
    "kind": "ColumnSchema",
-   "id": "9620abdf-a27e-47f6-99ef-053ae83c1911",
+   "id": "3eb5cb7d-b7c8-48ff-9886-149b38e2a7b6",
    "name": "Observation",
    "type": "string",
    "nRows": 0,
@@ -69,8 +69,23 @@
   },
   {
    "kind": "ColumnSchema",
-   "id": "7b8a8bf5-ff70-4a64-845d-1a35c2089999",
-   "name": "S100",
+   "id": "86d61ce5-262c-4d3e-81cb-3c968f809a25",
+   "name": "Cycle",
+   "type": "double",
+   "nRows": 0,
+   "size": -1,
+   "metaData": {
+    "kind": "ColumnSchemaMetaData",
+    "sort": [],
+    "ascending": true,
+    "quartiles": [],
+    "properties": []
+   }
+  },
+  {
+   "kind": "ColumnSchema",
+   "id": "5c31b2e6-e486-4b1b-9953-ca3808120398",
+   "name": "Measurement",
    "type": "double",
    "nRows": 0,
    "size": -1,
@@ -83,9 +98,9 @@
    }
   }
  ],
- "dataDirectory": "data/0f/5f/0f5fc87473202a26952bd0c606c22f31989c315f4e327c68a6553cdda6f0af59",
+ "dataDirectory": "data/ad/91/ad9103660cf3bfab1f884316b6273bebefe3665a820c168791e29c50bbab8229",
  "relation": {
   "kind": "Relation",
-  "id": "70cd741e-7723-435c-8d8f-11a7c45b1e0f"
+  "id": "7c47cc2e-05c5-4a57-8129-f2ce0f4cf3ce"
  }
 }
