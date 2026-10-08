@@ -1,6 +1,6 @@
 {
  "kind": "Workflow",
- "id": "7",
+ "id": "2",
  "isDeleted": false,
  "rev": "",
  "description": "",
@@ -80,20 +80,20 @@
   },
   {
    "kind": "Link",
-   "id": "2ad647ea-8ec7-4af2-bdf2-3a661b2f4919",
+   "id": "3de01b71-ee30-4fa6-acd6-4abe370836eb",
    "inputId": "0018a3f9-3a37-45ef-9637-8abd358713c8-i-0",
    "outputId": "a9ff9ffe-9802-4c9c-9765-f98928ca6601-o-0"
   },
   {
    "kind": "Link",
-   "id": "42a3fd17-012f-47a0-841b-0a15fc44e7cb",
+   "id": "003edb67-0934-47cc-b87b-ef79c45833c3",
    "inputId": "a9ff9ffe-9802-4c9c-9765-f98928ca6601-i-0",
-   "outputId": "ca714869-f197-4741-a9d6-827c84d0ff7f-o-0"
+   "outputId": "dd8146f7-b171-43f4-9ac9-6c335dd43a86-o-0"
   },
   {
    "kind": "Link",
-   "id": "259058e6-4b55-4e6b-81f1-e24de3925657",
-   "inputId": "75ab8d4f-7e28-409c-a202-b9a2e00cd028-i-0",
+   "id": "8804aad8-ba3c-43d6-806c-0440ad1022b7",
+   "inputId": "75df301a-490d-4fb1-a8fd-03860ba90911-i-0",
    "outputId": "7018ce36-8735-41c5-9d9c-949d0d51dade-o-0"
   }
  ],
@@ -298,7 +298,8 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -312,7 +313,7 @@
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Count",
-      "version": "1.0.2",
+      "version": "1.1.1",
       "operatorId": "3",
       "operatorKind": "ROperator",
       "propertyValues": [],
@@ -322,10 +323,54 @@
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
-       "ontologyUri": "",
-       "ontologyVersion": "",
-       "inputSpecs": [],
-       "outputSpecs": []
+       "ontologyUri": "https://tercen.com/_ontology/tercen",
+       "ontologyVersion": "0.0.1",
+       "inputSpecs": [
+        {
+         "kind": "CrosstabSpec",
+         "metaFactors": [
+          {
+           "kind": "MetaFactor",
+           "name": "Row",
+           "type": "",
+           "description": "Stratifying factor for rows (optional)",
+           "ontologyMapping": "row",
+           "crosstabMapping": "row",
+           "cardinality": "0..n",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "Column",
+           "type": "",
+           "description": "Stratifying factor for columns (optional)",
+           "ontologyMapping": "column",
+           "crosstabMapping": "column",
+           "cardinality": "0..n",
+           "factors": []
+          }
+         ],
+         "axis": [
+          {
+           "kind": "AxisSpec",
+           "metaFactors": [
+            {
+             "kind": "MetaFactor",
+             "name": "Observations",
+             "type": "numeric",
+             "description": "Observations to be counted per cell",
+             "ontologyMapping": "observation",
+             "crosstabMapping": "y",
+             "cardinality": "1..n",
+             "factors": []
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -387,13 +432,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 145
+     "nRows": 1
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "a1f36611-4d1e-49a4-8fda-b9d2586ba9da"
+    "id": "cc96e5dc-92c3-406c-871e-3c094c497eb8"
    },
    "parentDataStepId": ""
   },
@@ -427,8 +472,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -4.730934143066406,
-     "y": 26.5
+     "x": -3.7309341430664062,
+     "y": 27.5
     }
    },
    "state": {
@@ -597,7 +642,8 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -616,7 +662,8 @@
           "kind": "Factor",
           "name": "STKQC_LOD.thr.flag",
           "type": "string"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -630,7 +677,7 @@
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Count",
-      "version": "1.0.2",
+      "version": "1.1.1",
       "operatorId": "3",
       "operatorKind": "ROperator",
       "propertyValues": [],
@@ -640,10 +687,54 @@
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
-       "ontologyUri": "",
-       "ontologyVersion": "",
-       "inputSpecs": [],
-       "outputSpecs": []
+       "ontologyUri": "https://tercen.com/_ontology/tercen",
+       "ontologyVersion": "0.0.1",
+       "inputSpecs": [
+        {
+         "kind": "CrosstabSpec",
+         "metaFactors": [
+          {
+           "kind": "MetaFactor",
+           "name": "Row",
+           "type": "",
+           "description": "Stratifying factor for rows (optional)",
+           "ontologyMapping": "row",
+           "crosstabMapping": "row",
+           "cardinality": "0..n",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "Column",
+           "type": "",
+           "description": "Stratifying factor for columns (optional)",
+           "ontologyMapping": "column",
+           "crosstabMapping": "column",
+           "cardinality": "0..n",
+           "factors": []
+          }
+         ],
+         "axis": [
+          {
+           "kind": "AxisSpec",
+           "metaFactors": [
+            {
+             "kind": "MetaFactor",
+             "name": "Observations",
+             "type": "numeric",
+             "description": "Observations to be counted per cell",
+             "ontologyMapping": "observation",
+             "crosstabMapping": "y",
+             "cardinality": "1..n",
+             "factors": []
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -705,13 +796,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 113
+     "nRows": 1
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "226f00af-2e89-4571-986d-5d5261158c93"
+    "id": "90bc5881-2ac6-4bf5-af25-2959594c8cff"
    },
    "parentDataStepId": ""
   },
@@ -909,20 +1000,90 @@
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Ratio",
-      "version": "2.0.1",
-      "operatorId": "4",
+      "version": "2.3.0",
+      "operatorId": "6",
       "operatorKind": "ROperator",
-      "propertyValues": [],
+      "propertyValues": [
+       {
+        "kind": "PropertyValue",
+        "name": "Dividend Column ID",
+        "value": "0"
+       },
+       {
+        "kind": "PropertyValue",
+        "name": "Divisor Column ID",
+        "value": "0"
+       },
+       {
+        "kind": "PropertyValue",
+        "name": "Method",
+        "value": "y / x"
+       }
+      ],
       "url": {
        "kind": "Url",
        "uri": "https://github.com/tercen/ratio_operator"
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
-       "ontologyUri": "",
-       "ontologyVersion": "",
-       "inputSpecs": [],
-       "outputSpecs": []
+       "ontologyUri": "https://tercen.com/_ontology/tercen",
+       "ontologyVersion": "0.0.1",
+       "inputSpecs": [
+        {
+         "kind": "CrosstabSpec",
+         "metaFactors": [
+          {
+           "kind": "MetaFactor",
+           "name": "Row",
+           "type": "",
+           "description": "Optional row factor for grouping",
+           "ontologyMapping": "row",
+           "crosstabMapping": "row",
+           "cardinality": "0..n",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "Column",
+           "type": "",
+           "description": "Optional column factor for grouping",
+           "ontologyMapping": "column",
+           "crosstabMapping": "column",
+           "cardinality": "0..n",
+           "factors": []
+          }
+         ],
+         "axis": [
+          {
+           "kind": "AxisSpec",
+           "metaFactors": [
+            {
+             "kind": "MetaFactor",
+             "name": "Y Axis",
+             "type": "numeric",
+             "description": "The dividend of the ratio",
+             "ontologyMapping": "y-axis",
+             "crosstabMapping": "y",
+             "cardinality": "1",
+             "factors": []
+            },
+            {
+             "kind": "MetaFactor",
+             "name": "X Axis",
+             "type": "numeric",
+             "description": "The divisor of the ratio (optional if using column IDs)",
+             "ontologyMapping": "x-axis",
+             "crosstabMapping": "x",
+             "cardinality": "0..1",
+             "factors": []
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -984,13 +1145,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 113
+     "nRows": 1
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "385f04fe-2ade-44c4-9ab6-6277f41d6e49"
+    "id": "e7d18e68-30eb-4272-93a7-b1da8ba8b10e"
    },
    "parentDataStepId": ""
   },
@@ -1025,7 +1186,7 @@
     "topLeft": {
      "kind": "Point",
      "x": -43.511871337890625,
-     "y": 210.5
+     "y": 212.5
     }
    },
    "state": {
@@ -1207,7 +1368,8 @@
           "kind": "Factor",
           "name": "STKQC_LOD.qc_stk_thr.ratio",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -1220,21 +1382,22 @@
      "namespace": "STK_QC_2024.ds0",
      "operatorRef": {
       "kind": "OperatorRef",
-      "name": "Identity",
-      "version": "0.1.3",
-      "operatorId": "0",
-      "operatorKind": "ROperator",
+      "name": "",
+      "version": "",
+      "operatorId": "",
+      "operatorKind": "",
       "propertyValues": [],
       "url": {
        "kind": "Url",
-       "uri": "https://github.com/tercen/identity_operator"
+       "uri": ""
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
        "ontologyUri": "",
        "ontologyVersion": "",
        "inputSpecs": [],
-       "outputSpecs": []
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -1270,7 +1433,7 @@
     },
     "rowTable": {
      "kind": "CrosstabTable",
-     "cellSize": 21.0,
+     "cellSize": 10.75,
      "offset": 0,
      "graphicalFactors": [
       {
@@ -1323,7 +1486,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "7827c560-2d8a-4035-b17e-2a4dae7e702f"
+    "id": "128d8724-228e-46cd-b3ba-240dcaaa30e7"
    },
    "parentDataStepId": ""
   },
@@ -1415,7 +1578,7 @@
       "kind": "MappingFactor",
       "name": "Measurement",
       "type": "double",
-      "description": "",
+      "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* S100QC.logTransformed",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1426,7 +1589,7 @@
         "type": "double"
        }
       ],
-      "factorName": "Measurement",
+      "factorName": "Quantitation Type",
       "isSingle": true,
       "isRequired": true
      },
@@ -1434,7 +1597,7 @@
       "kind": "MappingFactor",
       "name": "Variable",
       "type": "string",
-      "description": "",
+      "description": "Select the peptide identifier.\n\nExample:\n* ID (default)",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1445,7 +1608,7 @@
         "type": "string"
        }
       ],
-      "factorName": "Variable",
+      "factorName": "Peptide",
       "isSingle": false,
       "isRequired": true
      },
@@ -1472,7 +1635,7 @@
       "kind": "MappingFactor",
       "name": "Cycle",
       "type": "double",
-      "description": "",
+      "description": "Select the factor that defines cycle. \n* Cycle (default)",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1495,19 +1658,9 @@
       "description": "Select the prephosphorylated peptides",
       "namedFilter": {
        "kind": "NamedFilter",
-       "logical": "and",
+       "logical": "or",
        "not": false,
        "filterExprs": [
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "pTY3H_64_78",
-         "factor": {
-          "kind": "Factor",
-          "name": "Variable",
-          "type": "string"
-         }
-        },
         {
          "kind": "FilterExpr",
          "filterOp": "equals",
@@ -1516,7 +1669,19 @@
           "kind": "Factor",
           "name": "Variable",
           "type": "string"
-         }
+         },
+         "preProcessors": []
+        },
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "pTY3H_64_78",
+         "factor": {
+          "kind": "Factor",
+          "name": "Variable",
+          "type": "string"
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -1527,7 +1692,7 @@
      {
       "kind": "MappingFilter",
       "name": "Cycle",
-      "description": "",
+      "description": "Select the last cycle",
       "namedFilter": {
        "kind": "NamedFilter",
        "logical": "and",
@@ -1541,11 +1706,12 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
-       "name": "Cycle"
+       "name": ""
       },
       "isRequired": true
      }
@@ -1556,7 +1722,7 @@
       "kind": "MappingFactor",
       "name": "Measurement",
       "type": "double",
-      "description": "",
+      "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* S100QC.logTransformed",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1567,7 +1733,7 @@
         "type": "double"
        }
       ],
-      "factorName": "Measurement",
+      "factorName": "Quantitation Type",
       "isSingle": true,
       "isRequired": true
      },
@@ -1575,7 +1741,7 @@
       "kind": "MappingFactor",
       "name": "Variable",
       "type": "string",
-      "description": "",
+      "description": "Select the peptide identifier.\n\nExample:\n* ID (default)",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1586,7 +1752,7 @@
         "type": "string"
        }
       ],
-      "factorName": "Variable",
+      "factorName": "Peptide",
       "isSingle": false,
       "isRequired": true
      },
@@ -1613,7 +1779,7 @@
       "kind": "MappingFactor",
       "name": "Cycle",
       "type": "double",
-      "description": "",
+      "description": "Select the factor that defines cycle. \n* Cycle (default)",
       "ontologyMapping": "",
       "crosstabMapping": "",
       "cardinality": "",
@@ -1636,19 +1802,9 @@
       "description": "Select the prephosphorylated peptides",
       "namedFilter": {
        "kind": "NamedFilter",
-       "logical": "and",
+       "logical": "or",
        "not": false,
        "filterExprs": [
-        {
-         "kind": "FilterExpr",
-         "filterOp": "equals",
-         "stringValue": "pTY3H_64_78",
-         "factor": {
-          "kind": "Factor",
-          "name": "Variable",
-          "type": "string"
-         }
-        },
         {
          "kind": "FilterExpr",
          "filterOp": "equals",
@@ -1657,7 +1813,19 @@
           "kind": "Factor",
           "name": "Variable",
           "type": "string"
-         }
+         },
+         "preProcessors": []
+        },
+        {
+         "kind": "FilterExpr",
+         "filterOp": "equals",
+         "stringValue": "pTY3H_64_78",
+         "factor": {
+          "kind": "Factor",
+          "name": "Variable",
+          "type": "string"
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -1668,7 +1836,7 @@
      {
       "kind": "MappingFilter",
       "name": "Cycle",
-      "description": "",
+      "description": "Select the last cycle",
       "namedFilter": {
        "kind": "NamedFilter",
        "logical": "and",
@@ -1682,11 +1850,12 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
-       "name": "Cycle"
+       "name": ""
       },
       "isRequired": true
      }
@@ -1723,8 +1892,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -14.223953247070312,
-     "y": -342.5
+     "x": -11.223953247070312,
+     "y": -340.5
     }
    },
    "state": {
@@ -1903,7 +2072,8 @@
           "kind": "Factor",
           "name": "Variable",
           "type": "string"
-         }
+         },
+         "preProcessors": []
         },
         {
          "kind": "FilterExpr",
@@ -1913,7 +2083,8 @@
           "kind": "Factor",
           "name": "Variable",
           "type": "string"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -1932,7 +2103,8 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -1946,8 +2118,8 @@
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Mean",
-      "version": "1.3.2",
-      "operatorId": "1",
+      "version": "1.4.0",
+      "operatorId": "4",
       "operatorKind": "ROperator",
       "propertyValues": [],
       "url": {
@@ -1956,10 +2128,64 @@
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
-       "ontologyUri": "",
-       "ontologyVersion": "",
-       "inputSpecs": [],
-       "outputSpecs": []
+       "ontologyUri": "https://tercen.com/_ontology/tercen",
+       "ontologyVersion": "0.0.1",
+       "inputSpecs": [
+        {
+         "kind": "CrosstabSpec",
+         "metaFactors": [
+          {
+           "kind": "MetaFactor",
+           "name": "Sample",
+           "type": "",
+           "description": "Sample identifiers",
+           "ontologyMapping": "sample",
+           "crosstabMapping": "row",
+           "cardinality": "0..n",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "Variable",
+           "type": "",
+           "description": "Variable identifiers",
+           "ontologyMapping": "variable",
+           "crosstabMapping": "column",
+           "cardinality": "0..n",
+           "factors": []
+          }
+         ],
+         "axis": [
+          {
+           "kind": "AxisSpec",
+           "metaFactors": [
+            {
+             "kind": "MetaFactor",
+             "name": "Y-Axis Measurement",
+             "type": "numeric",
+             "description": "Measurement value, per cell",
+             "ontologyMapping": "measurement",
+             "crosstabMapping": "y",
+             "cardinality": "1",
+             "factors": []
+            },
+            {
+             "kind": "MetaFactor",
+             "name": "X-Axis Measurement (Optional)",
+             "type": "numeric",
+             "description": "Second measurement value, per cell (optional)",
+             "ontologyMapping": "measurement",
+             "crosstabMapping": "x",
+             "cardinality": "0..1",
+             "factors": []
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -2027,7 +2253,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "fdd715d0-ef07-4efa-8c3d-46ece515c2e4"
+    "id": "91232339-9412-410a-878a-1f258e2886c0"
    },
    "parentDataStepId": ""
   },
@@ -2061,7 +2287,7 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -8.674957275390625,
+     "x": -7.674957275390625,
      "y": -151.5
     }
    },
@@ -2315,7 +2541,7 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 23
+     "nRows": 1
     },
     "filters": {
      "kind": "Filters",
@@ -2334,7 +2560,8 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -2349,7 +2576,7 @@
       "kind": "OperatorRef",
       "name": "Thresholding",
       "version": "0.2.2",
-      "operatorId": "5",
+      "operatorId": "1",
       "operatorKind": "ROperator",
       "propertyValues": [
        {
@@ -2377,7 +2604,8 @@
        "ontologyUri": "",
        "ontologyVersion": "",
        "inputSpecs": [],
-       "outputSpecs": []
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -2439,13 +2667,13 @@
       }
      ],
      "rectangleSelections": [],
-     "nRows": 145
+     "nRows": 1
     },
     "taskId": ""
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "92cb61c1-5679-4eb0-a2a4-f720b3e7d649"
+    "id": "f34e40ab-c58c-4ea0-8956-9596abb3ea1f"
    },
    "parentDataStepId": ""
   },
@@ -2649,7 +2877,8 @@
           "kind": "Factor",
           "name": "Variable",
           "type": "string"
-         }
+         },
+         "preProcessors": []
         },
         {
          "kind": "FilterExpr",
@@ -2659,7 +2888,8 @@
           "kind": "Factor",
           "name": "Variable",
           "type": "string"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -2673,8 +2903,8 @@
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Multiply by Constant",
-      "version": "0.1.3",
-      "operatorId": "6",
+      "version": "0.2.0",
+      "operatorId": "5",
       "operatorKind": "ROperator",
       "propertyValues": [
        {
@@ -2689,10 +2919,54 @@
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
-       "ontologyUri": "",
-       "ontologyVersion": "",
-       "inputSpecs": [],
-       "outputSpecs": []
+       "ontologyUri": "https://tercen.com/_ontology/tercen",
+       "ontologyVersion": "0.0.1",
+       "inputSpecs": [
+        {
+         "kind": "CrosstabSpec",
+         "metaFactors": [
+          {
+           "kind": "MetaFactor",
+           "name": "Row",
+           "type": "",
+           "description": "Optional row factor.",
+           "ontologyMapping": "variable",
+           "crosstabMapping": "row",
+           "cardinality": "0..n",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "Column",
+           "type": "",
+           "description": "Optional column factor.",
+           "ontologyMapping": "observation",
+           "crosstabMapping": "column",
+           "cardinality": "0..n",
+           "factors": []
+          }
+         ],
+         "axis": [
+          {
+           "kind": "AxisSpec",
+           "metaFactors": [
+            {
+             "kind": "MetaFactor",
+             "name": "Initial Value",
+             "type": "numeric",
+             "description": "The initial value before multiplication.",
+             "ontologyMapping": "measurement",
+             "crosstabMapping": "y",
+             "cardinality": "1",
+             "factors": []
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -2760,7 +3034,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "0b686acd-1e57-4b0a-a926-0ef34812bedd"
+    "id": "150694fc-1058-4e13-9ba1-77033a2ddd49"
    },
    "parentDataStepId": ""
   },
@@ -2985,7 +3259,8 @@
           "kind": "Factor",
           "name": "Cycle",
           "type": "double"
-         }
+         },
+         "preProcessors": []
         }
        ],
        "meta": [],
@@ -3000,7 +3275,7 @@
       "kind": "OperatorRef",
       "name": "Log Cutoff",
       "version": "0.1.3",
-      "operatorId": "2",
+      "operatorId": "0",
       "operatorKind": "ROperator",
       "propertyValues": [
        {
@@ -3028,7 +3303,8 @@
        "ontologyUri": "",
        "ontologyVersion": "",
        "inputSpecs": [],
-       "outputSpecs": []
+       "outputSpecs": [],
+       "outputSpecsV2": []
       }
      },
      "environment": [
@@ -3096,19 +3372,19 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "38b6ac14-5b48-44dd-bfaa-caf64cae050d"
+    "id": "f5a8c165-53b7-4244-b939-09639cc33e1e"
    },
    "parentDataStepId": ""
   },
   {
    "kind": "InStep",
-   "id": "ca714869-f197-4741-a9d6-827c84d0ff7f",
+   "id": "dd8146f7-b171-43f4-9ac9-6c335dd43a86",
    "groupId": "",
    "name": "Input",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "ca714869-f197-4741-a9d6-827c84d0ff7f-i-0",
+     "id": "dd8146f7-b171-43f4-9ac9-6c335dd43a86-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -3116,7 +3392,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "ca714869-f197-4741-a9d6-827c84d0ff7f-o-0",
+     "id": "dd8146f7-b171-43f4-9ac9-6c335dd43a86-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -3130,8 +3406,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": -8.495000000000005,
-     "y": -646.5
+     "x": -24.495000000000005,
+     "y": -654.5
     }
    },
    "state": {
@@ -3150,13 +3426,13 @@
   },
   {
    "kind": "OutStep",
-   "id": "75ab8d4f-7e28-409c-a202-b9a2e00cd028",
+   "id": "75df301a-490d-4fb1-a8fd-03860ba90911",
    "groupId": "",
    "name": "Output",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "75ab8d4f-7e28-409c-a202-b9a2e00cd028-i-0",
+     "id": "75df301a-490d-4fb1-a8fd-03860ba90911-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -3164,7 +3440,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "75ab8d4f-7e28-409c-a202-b9a2e00cd028-o-0",
+     "id": "75df301a-490d-4fb1-a8fd-03860ba90911-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -3178,8 +3454,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": 218.505,
-     "y": 121.5
+     "x": 293.505,
+     "y": 118.5
     }
    },
    "state": {
@@ -3199,8 +3475,8 @@
  ],
  "offset": {
   "kind": "Point",
-  "x": 962.0,
-  "y": 745.0
+  "x": 750.0,
+  "y": 268.0
  },
  "scale": 1.0
 }

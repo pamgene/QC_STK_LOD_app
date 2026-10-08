@@ -50,7 +50,8 @@
     "ascending": true,
     "quartiles": [],
     "properties": []
-   }
+   },
+   "storageSize": 0.0
   },
   {
    "kind": "ColumnSchema",
@@ -65,7 +66,8 @@
     "ascending": true,
     "quartiles": [],
     "properties": []
-   }
+   },
+   "storageSize": 0.0
   },
   {
    "kind": "ColumnSchema",
@@ -80,7 +82,8 @@
     "ascending": true,
     "quartiles": [],
     "properties": []
-   }
+   },
+   "storageSize": 0.0
   },
   {
    "kind": "ColumnSchema",
@@ -95,12 +98,15 @@
     "ascending": true,
     "quartiles": [],
     "properties": []
-   }
+   },
+   "storageSize": 0.0
   }
  ],
  "dataDirectory": "data/ad/91/ad9103660cf3bfab1f884316b6273bebefe3665a820c168791e29c50bbab8229",
  "relation": {
   "kind": "Relation",
   "id": "7c47cc2e-05c5-4a57-8129-f2ce0f4cf3ce"
- }
+ },
+ "size": 110744,
+ "storageSize": 110744.0
 }
