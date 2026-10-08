@@ -1711,7 +1711,7 @@
         }
        ],
        "meta": [],
-       "name": ""
+       "name": "Cycle"
       },
       "isRequired": true
      }
@@ -1855,7 +1855,7 @@
         }
        ],
        "meta": [],
-       "name": ""
+       "name": "Cycle"
       },
       "isRequired": true
      }
